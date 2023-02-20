@@ -1,38 +1,142 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-image: url(img/fondo1.gif);
+    background-size: 100% 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/** new*/
+@font-face {
+    font-family: FredokaOne;
+    src: url(fonts/FredokaOne-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(fonts/Raleway-Medium.ttf) format("truetype");
+}
+.title {
+    font-family: FredokaOne;
+    letter-spacing: 2px;
+}
+
+.content {
+    font-family: Raleway;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.card {
+    box-shadow: -1px 1px 5px rgb(222 219 219);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 520px;
+    height: 520px;
+    padding: 25px 40px;
+    border-radius: 20px;
+    color: black;
+    font-family: Raleway;
+    opacity: 0.9;
+}
+
+p.title {
+    font-size: 2.5rem;
+    text-shadow: 1px 1px white, -1px -1px #333;
+    padding-bottom: 20px;
+    color: #ddd;
+}
+
+.weather-icon img {
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+}
+
+.notification {
+    margin: 15px 0px;
+    padding-top: 20px;
+    font-weight: bolder;
+    font-size: 1.6rem;
+    text-shadow: 1px 1px white, -1px -1px #333;
+    color: rgb(64, 66, 64);
+    letter-spacing: 2px;
+}
+
+.notification .country {
+    margin-bottom: -5px;
+}
+
+.temperature-description {
+    font-weight: bolder;
+    text-shadow: 1px 1px white, -1px -1px #333;
+    color: rgb(64, 66, 64);
+    letter-spacing: 2px;
+}
+
+.notification p {
+    margin-bottom: 5px;
+}
+
+hr {
+    border: 0px;
+    border-bottom: 1px solid;
+    border-color: rgb(221, 212, 212);
+    box-shadow: 0px 1px 5px rgb(222 219 219);
+}
+
+.temperature-value p {
+    cursor: pointer;
+    margin-top: -30px;
+}
+
+.box-humidity {
+    display: inline-block;
+    position: relative;
+    right: 150px;
+}
+
+.humidity {
+    text-shadow: 1px 1px white, -1px -1px #333;
+    color: #ddd;
+    font-size: 1.7rem;
+    padding-left: 5px;
+    text-justify: right;
 }
